@@ -1,15 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import NavigationBar from '../components/NavigationBar.astro'
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import NavigationBar from "../components/NavigationBar.astro";
 ---
 
 <Layout title="Welcome to Astro, Anna!">
 	<main>
-		<NavigationBar>
-			
-		</NavigationBar>
-
+		<div class="header">
+			<NavigationBar />
+		</div>
 		<!-- <svg
 			class="astro-a"
 			width="495"
@@ -38,14 +37,20 @@ import NavigationBar from '../components/NavigationBar.astro'
 				</linearGradient>
 			</defs>
 		</svg> -->
-		<h1><span class="text-gradient">Sr. Automation Quality Assurance Engineer</span></h1>
-		<p class="instructions">
-			ISTQB certified detail-oriented Automation QA Engineer with over 6 years 
-			of extensive experience in software testing. Skilled in writing automated 
-			tests using <strong>Playwright</strong> and <strong>TypeScript</strong> in 
-			CI/CD pipelines.</br>
-			Proficient in designing efficient test plans, test strategies, 
-			and test cases. A reliable person with excellent problem-solving skills.
+		<h1>
+			<span class="text-gradient"
+				>Senior Automation Quality Assurance Engineer</span
+			>
+		</h1>
+		<p class="instructions slightly-below-nav" id="skills">
+			ISTQB certified detail-oriented Automation QA Engineer with over 6
+			years of extensive experience in software testing. Skilled in
+			writing automated tests using <strong>Playwright</strong> and <strong
+				>TypeScript</strong
+			>
+			in CI/CD pipelines. Proficient in designing efficient test plans, test
+			strategies, and test cases. A reliable person with excellent problem-solving
+			skills.
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
@@ -69,6 +74,18 @@ import NavigationBar from '../components/NavigationBar.astro'
 				body="Come say hi to our amazing Discord community."
 			/>
 		</ul>
+
+		<div id="contact">
+			<h3 class="text-instructions">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+				enim ad minim veniam, quis nostrud exercitation ullamco laboris
+				nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+				in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+				nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+				sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</h3>
+		</div>
 	</main>
 </Layout>
 
@@ -81,6 +98,27 @@ import NavigationBar from '../components/NavigationBar.astro'
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+	}
+	.text-instructions {
+		color: rgb(216, 21, 255);
+		font-size: 45px;
+		line-height: 1.30;
+		text-align: center;
+		text-shadow: 2px 1px 8px rgb(246, 194, 235);
+		padding: 29px 10px 0px 0px;
+
+
+	}
+	.header {
+		margin: auto;
+		position: sticky;
+		top: 0;
+		width: auto;
+		z-index: 1;
+	}
+	.slightly-below-nav {
+		/* to navigate NOT exactly to the top, but 100px below that*/
+		scroll-margin-top: 100px;
 	}
 	.astro-a {
 		position: absolute;
@@ -108,7 +146,10 @@ import NavigationBar from '../components/NavigationBar.astro'
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		background: linear-gradient(
+			rgba(var(--accent-dark), 66%),
+			rgba(var(--accent-dark), 33%)
+		);
 		padding: 1.5rem;
 		border-radius: 8px;
 		text-align: justify;
