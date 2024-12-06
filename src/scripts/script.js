@@ -1,21 +1,25 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
-
 hamburger.addEventListener("click", () => {
-    if (hamburger) {
+    // Find out if click was made on the opened hamburger menu.
+    let crossIcon = document.querySelectorAll(".hamburger.active");
+    
+    if (hamburger && navMenu && crossIcon.length <= 0 ) {
+        // hamburger menu is not open - let's open it!
         hamburger.classList.add("active");
-    } else {
-        console.warn('Element hamburger not found!');
-    }
-    if(navMenu) {
         navMenu.classList.add("active")
+    } else if (hamburger && navMenu && crossIcon.length > 0 ) {
+        // hamburger menu is opened - let's close it!
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
     } else {
-        console.warn('Element navMenu not found!');
+        console.warn('Element hamburger or/and navMenu were not found!');
     }
 })
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+// to close hamburger menu if any of the navigation menu links were clicked
+document.querySelectorAll(".nav-link").forEach(link => link.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }))
