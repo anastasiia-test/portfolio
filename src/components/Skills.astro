@@ -1,11 +1,146 @@
-<section>
-    <h1>Skills</h1>
-
+<section id="skills" class="section skills">
+    <h1 class="skills_title">Skills</h1>
+    <div class="skills_boxes">
+        <div class="dropdown">
+            <div class="testing_skills container">
+                <h3 class="skills_subtitle">
+                    <i class="fas fa-theater-masks"></i>
+                    Testing<i class="fa-solid fa-chevron-right fa-sm"></i>
+                </h3>
+            </div>
+            <ul class="dropdown-content">
+                <li>
+                    <div class="skills-item"><h2>HTML/CSS</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress_bar-line" style="width: 100%">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills-item"><h2>Playwright</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress_bar-line" style="width: 100%;">
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="dropdown-1">
+            <div class="soft_skills container-1">
+                <h3 class="skills_subtitle">
+                    Soft skills<i class="fa-solid fa-chevron-right fa-sm"></i>
+                </h3>
+            </div>
+            <ul class="dropdown-content-1">
+                <li>
+                    <div class="skills-item"><h2>Communication</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress_bar-line" style="width: 100%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills-item"><h2>Time management</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress_bar-line" style="width: 100%;">
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </section>
 
 <style>
+    .fa-chevron-right {
+        padding: 10px;
+        cursor: pointer;
+    }
+    .dropdown {
+        display: table-cell;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .dropdown-1 {
+        display: table-cell;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .container {
+        display: block;
+    }
+    .container-1 {
+        display: block;
+    }
+    #skills {
+        margin: 75px 0px 0px 0px;
+        padding: 0;
+    }
     h1 {
         display: block;
         font-size: 80px;
+        margin: 0 0 0 0;
+        padding-left: 0px;
+    }
+    .dropdown-content {
+        display: none;
+        flex-direction: column;
+        padding: 30px 40px;
+        margin: 0;
+    }
+    .dropdown-content-active {
+        display: flex;
+    }
+    .dropdown-content-1 {
+        display: none;
+        flex-direction: column;
+        padding: 30px 40px;
+        margin: 0;
+    }
+    .dropdown-content-1-active {
+        display: flex;
+    }
+
+    div.skills_boxes {
+        display: table;
+        table-layout: fixed;
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+        width: 100%;
+    }
+
+    h1.skills_title {
+        display: block;
+        background-image: var(--accent-gradient);
+        background-size: 100% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: white;
+        margin: 5vh auto;
+        text-align: left;
+        font-weight: 750;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .skills_subtitle {
+        background-image: var(--accent-gradient);
+        background-size: 200% 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: white;
+        margin: 0 2 3 2;
+    }
+
+    .skills_title:is(:hover, :focus-within) {
+        color: rgba(0, 0, 0, 0);
+        background-position: 0;
+        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    h3.skills_subtitle:is(:hover, :focus-within) {
+        color: rgba(0, 0, 0, 0);
+        background-position: 0;
+        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     }
 </style>
