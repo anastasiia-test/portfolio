@@ -1,48 +1,109 @@
 <section id="skills" class="section skills">
-    <h1 class="skills_title">Skills</h1>
-    <div class="skills_boxes">
+    <h1 class="skills-title">Skills</h1>
+    <div class="skills-boxes">
         <div class="dropdown">
-            <div class="testing_skills container">
-                <h3 class="skills_subtitle">
+            <div class="testing-skills container">
+                <h3 class="skills-subtitle">
                     <i class="fas fa-theater-masks"></i>
-                    Testing<i class="fa-solid fa-chevron-right fa-sm"></i>
+                    Automation<i
+                        class="fa-solid fa-chevron-right fa-sm"
+                        id="right-chevron-testing-skills"></i>
                 </h3>
             </div>
-            <ul class="dropdown-content">
+            <ul slot="soft-skills" class="dropdown-content testing-skills">
                 <li>
-                    <div class="skills-item"><h2>HTML/CSS</h2></div>
+                    <div class="skills-item"><h2>Playwright</h2></div>
                     <div class="progress-bar">
-                        <span class="progress_bar-line" style="width: 100%">
+                        <span class="progress-bar-line" style="width: 100%;"
+                        ></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills-item"><h2>Cypress</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress-bar-line" style="width: 100%;">
                         </span>
                     </div>
                 </li>
                 <li>
-                    <div class="skills-item"><h2>Playwright</h2></div>
+                    <div class="skills-item"><h2>JavaScript</h2></div>
                     <div class="progress-bar">
-                        <span class="progress_bar-line" style="width: 100%;">
+                        <span class="progress-bar-line" style="width: 100%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills-item"><h2>Typescript</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress-bar-line" style="width: 100%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills-item"><h2>Docker</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress-bar-line" style="width: 100%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills-item"><h2>CI/CD GitHub Actions</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress-bar-line" style="width: 100%;">
                         </span>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="dropdown-1">
-            <div class="soft_skills container-1">
-                <h3 class="skills_subtitle">
-                    Soft skills<i class="fa-solid fa-chevron-right fa-sm"></i>
+        <div class="dropdown">
+            <div class="soft-skills container">
+                <h3 class="skills-subtitle">
+                    <i class="fa-solid fa-gauge fa-sm"></i>
+                    Testing<i
+                        class="fa-solid fa-chevron-right fa-sm"
+                        id=`right-chevron-soft-skills`></i>
                 </h3>
             </div>
-            <ul class="dropdown-content-1">
+            <ul slot="soft-skills" class="dropdown-content soft-skills">
                 <li>
-                    <div class="skills-item"><h2>Communication</h2></div>
+                    <div class="skills-item"><h2>Functional</h2></div>
                     <div class="progress-bar">
-                        <span class="progress_bar-line" style="width: 100%;">
+                        <span class="progress-bar-line" style="width: 100%;"
+                        ></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills-item"><h2>Regression</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress-bar-line" style="width: 100%;">
                         </span>
                     </div>
                 </li>
                 <li>
-                    <div class="skills-item"><h2>Time management</h2></div>
+                    <div class="skills-item"><h2>Black-box</h2></div>
                     <div class="progress-bar">
-                        <span class="progress_bar-line" style="width: 100%;">
+                        <span class="progress-bar-line" style="width: 100%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills-item"><h2>White-box</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress-bar-line" style="width: 100%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills-item"><h2>Test Design</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress-bar-line" style="width: 100%;">
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="skills-item"><h2>Bug tracking</h2></div>
+                    <div class="progress-bar">
+                        <span class="progress-bar-line" style="width: 100%;">
                         </span>
                     </div>
                 </li>
@@ -52,20 +113,6 @@
 </section>
 
 <style>
-    .fa-chevron-right {
-        padding: 10px;
-        cursor: pointer;
-    }
-    .dropdown {
-        display: table-cell;
-        margin: 0 auto;
-        text-align: center;
-    }
-    .dropdown-1 {
-        display: table-cell;
-        margin: 0 auto;
-        text-align: center;
-    }
     .container {
         display: block;
     }
@@ -82,65 +129,129 @@
         margin: 0 0 0 0;
         padding-left: 0px;
     }
+
+    h2 {
+        font-size: 20px;
+        text-align: left;
+    }
+    .fa-chevron-right {
+        padding: 10px;
+        cursor: pointer;
+    }
+    .dropdown {
+        display: table-cell;
+        margin: 0 auto;
+        padding: 0 auto;
+        text-align: left;
+        cursor: pointer;
+        /* width: 19rem; */
+    }
+    .container {
+        display: block;
+        margin: 3rem 0 0.5rem 0;
+    }
     .dropdown-content {
         display: none;
         flex-direction: column;
-        padding: 30px 40px;
-        margin: 0;
+        list-style-type: none; /* Remove bullets from ul*/
+        margin: 1rem auto;
+
     }
     .dropdown-content-active {
-        display: flex;
-    }
-    .dropdown-content-1 {
-        display: none;
+        display: block;
         flex-direction: column;
-        padding: 30px 40px;
-        margin: 0;
+        /* margin: 0.3em 0.5rem 0.7rem 4.1rem; */
+        margin: 0 auto;
+        /* padding: 0 0 0 1em; */
+        padding: auto;
+        justify-content: space-evenly;
     }
-    .dropdown-content-1-active {
+    .skills-subtitle {
+        background-image: var(--accent-gradient);
+        background-size: 200% 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: white;
+        /* margin: 0.3em 2rem 0.7rem 4rem; */
+        margin: 0 3.96rem auto;
+        padding: 0 auto;
+    }
+    h3.skills-subtitle:is(:hover, :focus-within) {
+        color: rgba(0, 0, 0, 0);
+        background-position: 0;
+        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .skills-item {
         display: flex;
+        flex-direction: column;
     }
 
-    div.skills_boxes {
-        display: table;
-        table-layout: fixed;
-        margin: 0;
-        padding: 0;
-        font-size: 30px;
-        width: 100%;
-    }
-
-    h1.skills_title {
+    .skills-title {
         display: block;
         background-image: var(--accent-gradient);
         background-size: 100% 100%;
         background-clip: text;
         -webkit-background-clip: text;
         color: white;
-        margin: 5vh auto;
+        margin: 0 0.5rem auto;
         text-align: left;
         font-weight: 750;
     }
-    h2 {
-        font-size: 20px;
+
+    .skills-title:is(:hover, :focus-within) {
+        color: rgba(0, 0, 0, 0);
+        background-position: 0;
+        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     }
-    .skills_subtitle {
-        background-image: var(--accent-gradient);
-        background-size: 200% 200%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: white;
-        margin: 0 2 3 2;
+    .skills-boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .progress-bar-line {
+        background: #6962fd;
+        border-radius: inherit;
+        display: block;
+        height: 100%;
+    }
+    .progress-bar {
+        background: #b7c0cb;
+        border-radius: 5px;
+        height: 10px;
+        width: 100%;
     }
 
-    .skills_title:is(:hover, :focus-within) {
-        color: rgba(0, 0, 0, 0);
-        background-position: 0;
-        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    @media screen and (max-width: 970px) {
+        .skills-boxes {
+            width: 70%;
+        }
     }
-    h3.skills_subtitle:is(:hover, :focus-within) {
-        color: rgba(0, 0, 0, 0);
-        background-position: 0;
-        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+    @media screen and (max-width: 850px) {
+        .skills-boxes {
+            width: 60%;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .skills-boxes {
+            width: 70%;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .skills-boxes {
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .skills-boxes {
+            width: 100%;
+        }
     }
 </style>

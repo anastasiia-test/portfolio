@@ -1,11 +1,6 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
-const testingSkillsDropBtn = document.querySelector('.testing_skills');
-const dropdownContent = document.querySelector('.dropdown-content');
-const arrow = document.querySelector('.fa-chevron-right');
-const softSkillsDropBtn = document.querySelector('.soft_skills');
-const softSkillDropdownContent = document.querySelector('.dropdown-content-1');
-const softSkillArrow = document.querySelector('.soft_skills h3 i.fa-chevron-right');
+const dropdownsWrapper = document.querySelector('.skills-boxes');
 
 hamburger.addEventListener("click", () => {
     // find out if click was made on the opened hamburger menu ( opened hamburger has class `active`).
@@ -30,19 +25,12 @@ document.querySelectorAll(".nav-link").forEach(link => link.addEventListener("cl
     navMenu.classList.remove("active");
 }))
 
-testingSkillsDropBtn.addEventListener('click', () => {
-    if (dropdownContent.classList.contains('dropdown-content')) {
-        dropdownContent.classList.toggle('dropdown-content-active')
-        arrow.classList.toggle('fa-rotate-90')
-    }
-})
+// add event listener for an event 'click' on any dropdown
+document.querySelectorAll(".container").forEach(dropdown => dropdown.addEventListener("click", () => {
+    const dropdownType = dropdown.classList[0];
+    const dropdownContent = document.querySelector(`.dropdown-content.${dropdownType}`)
+    const arrow = document.querySelector(`#right-chevron-${dropdownType}`)
 
-softSkillsDropBtn.addEventListener('click', () => {
-    if (softSkillDropdownContent.classList.contains('dropdown-content-1')) {
-        softSkillDropdownContent.classList.toggle('dropdown-content-1-active')
-        softSkillArrow.classList.toggle('fa-rotate-90')
-    }
-})
-
-
-
+    dropdownContent.classList.toggle('dropdown-content-active')
+    arrow.classList.toggle('fa-rotate-90')
+}))
