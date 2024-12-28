@@ -11,10 +11,26 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Anastasia's Portfolio" />
-		<meta name="keywords" content="QA, Senior Software Quality Assurance Engineer, Test Automation, Tester">
-		<meta name="viewport" content="width=device-width", user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<meta
+			name="keywords"
+			content="QA, Senior Software Quality Assurance Engineer, Test Automation, Tester"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width"
+			,
+			user-scalable="no,"
+			initial-scale="1.0,"
+			maximum-scale="1.0,"
+			minimum-scale='1.0"'
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="author" content="Anastasia Taushkanova" />
@@ -26,6 +42,26 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+	/* oxygen regular */
+	@font-face {
+		src: url("/fonts/poppins-v19-latin-regular.woff2");
+		font-family: "Poppins";
+		font-weight: 400;
+	}
+
+	/* oxygen semi-bold */
+	@font-face {
+		src: url("/fonts/poppins-v19-latin-600.woff2");
+		font-family: "Poppins";
+		font-weight: 600;
+	}
+
+	/* oxygen bold */
+	@font-face {
+		src: url("/fonts/poppins-v19-latin-700.woff2");
+		font-family: "Poppins";
+		font-weight: 700;
+	}
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -37,31 +73,35 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			rgb(4, 214, 246) 60%
 		);
-
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		/* font-family: system-ui, sans-serif; */
+		font-family: Poppins;
 		background: #262626;
 		margin: 0;
 		padding: 0;
 		overflow-y: scroll; /*Force scrollbars to always be visible to prevent layout shifts */
 	}
 	body {
-    	margin: 0;
-    	padding: 0;
-		background-color:#262626
+		margin: 0;
+		padding: 0;
+		background-color: #262626;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-			Roboto;
-	}
+	h1 {
+        display: block;
+        background-image: var(--accent-gradient);
+        background-size: 100% 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: white;
+        margin: 0 0.5rem auto;
+        text-align: left;
+    }
+	h1:is(:hover, :focus-within) {
+        color: rgba(0, 0, 0, 0);
+        background-position: 0;
+        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
 
 </style>

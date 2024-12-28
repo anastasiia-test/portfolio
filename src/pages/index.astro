@@ -1,38 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Projects from "../components/Projects.astro";
 import NavigationBar from "../components/NavigationBar.astro";
 import About from "../components/About.astro";
 import Skills from "../components/Skills.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title=`Anastasia's Portfolio`>
 	<main>
 		<NavigationBar />
 		<About />
-		<ul role="list" class="link-card-grid" id="projects">
-			<Card
-				href="https://docs.astro.build/"
-				title="Project test-automation-pipeline"
-				body="Test project to showcase test automation skills"
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="SuperFall"
-				body="Blanket and hot chocolate with a cookie, what else do you need this Autamn?"
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community."
-			/>
-		</ul>
+		<Projects />
 		<Skills />
+		<Contact />
+		<Footer />
 	</main>
 </Layout>
 
@@ -75,10 +58,5 @@ import Skills from "../components/Skills.astro";
 	.instructions strong {
 		color: rgb(var(--accent-light));
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+
 </style>

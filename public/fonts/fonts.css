@@ -1,0 +1,20 @@
+/* oxygen regular */
+@font-face {
+    src: url("./poppins-v19-latin-regular.woff2");
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+/* oxygen semi-bold */
+@font-face {
+    src: url("./poppins-v19-latin-600.woff2");
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+/* oxygen bold */
+@font-face {
+    src: url("./poppins-v19-latin-700.woff2");
+    font-family: 'Poppins';
+    font-weight: 700;
+}
