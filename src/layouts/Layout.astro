@@ -81,27 +81,31 @@ const { title } = Astro.props;
 		margin: 0;
 		padding: 0;
 		overflow-y: scroll; /*Force scrollbars to always be visible to prevent layout shifts */
+		height: 100%; /* Ensure the body stretches with the content */
 	}
 	body {
 		margin: 0;
 		padding: 0;
 		background-color: #262626;
+		overflow-y: auto; /* Allows vertical scrolling */
+		overflow-x: hidden; /* Prevents horizontal scrolling, optional */
+		height: 100%; /* Ensure the body stretches with the content */
 	}
 	h1 {
         display: block;
         background-image: var(--accent-gradient);
-        background-size: 100% 100%;
         background-clip: text;
         -webkit-background-clip: text;
         color: white;
         margin: 0 0.5rem auto;
-        text-align: left;
+        text-align: center;
+		-webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 300%;
+        background-position: 0%;
     }
-	h1:is(:hover, :focus-within) {
-        color: rgba(0, 0, 0, 0);
-        background-position: 0;
-        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-
+	[class$="-title"] {
+		font-size: 52px;
+	}
+	
 </style>
