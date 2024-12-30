@@ -34,3 +34,12 @@ document.querySelectorAll(".container").forEach(dropdown => dropdown.addEventLis
     dropdownContent.classList.toggle('dropdown-content-active')
     arrow.classList.toggle('fa-rotate-90')
 }))
+
+const element = document.getElementById("collapsible");
+element.addEventListener("shown.bs.collapse", (event) => {
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest"
+  });
+});
