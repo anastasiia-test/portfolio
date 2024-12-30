@@ -13,7 +13,7 @@
             <ul class="dropdown-content automation-skills">
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>Playwright</h2>
+                        <h2 class="skills-item-title">Playwright</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" style="width: 100%;"
@@ -22,7 +22,7 @@
                 </li>
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>Cypress</h2>
+                        <h2 class="skills-item-title">Cypress</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" style="width: 100%;">
@@ -31,7 +31,7 @@
                 </li>
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>JavaScript</h2>
+                        <h2 class="skills-item-title">JavaScript</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" style="width: 100%;">
@@ -40,7 +40,7 @@
                 </li>
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>Typescript</h2>
+                        <h2 class="skills-item-title">Typescript</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" style="width: 100%;">
@@ -49,7 +49,7 @@
                 </li>
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>Docker</h2>
+                        <h2 class="skills-item-title">Docker</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" style="width: 100%;">
@@ -58,7 +58,7 @@
                 </li>
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>CI/CD pipelines</h2>
+                        <h2 class="skills-item-title">CI/CD pipelines</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" id="collapsible" style="width: 100%;">
@@ -79,7 +79,7 @@
             <ul class="dropdown-content testing-skills">
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>Functional</h2>
+                        <h2 class="skills-item-title">Functional</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" style="width: 100%;"
@@ -88,7 +88,7 @@
                 </li>
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>Regression</h2>
+                        <h2 class="skills-item-title">Regression</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" style="width: 100%;">
@@ -97,7 +97,7 @@
                 </li>
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>Black-box</h2>
+                        <h2 class="skills-item-title">Black-box</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" style="width: 100%;">
@@ -106,7 +106,7 @@
                 </li>
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>White-box</h2>
+                        <h2 class="skills-item-title">White-box</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" style="width: 100%;">
@@ -115,7 +115,7 @@
                 </li>
                 <li class="skills-item">
                     <div class="skills-item-container">
-                        <h2 skills-item-title>Test Design</h2>
+                        <h2 class="skills-item-title">Test Design</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" style="width: 100%;">
@@ -124,7 +124,7 @@
                 </li>
                 <li class="skills-item" >
                     <div class="skills-item-container">
-                        <h2 skills-item-title>Bug tracking</h2>
+                        <h2 class="skills-item-title">Bug tracking</h2>
                     </div>
                     <div class="progress-bar">
                         <span class="progress-bar-line" id="collapsible" style="width: 100%;">
@@ -157,8 +157,8 @@
     }
     .dropdown {
         display: flex;
-        padding-top: 70px;
-        cursor: pointer;
+        /* padding-top: 70px; */
+        /* cursor: pointer; */
         flex-direction: column;
     }
     .container {
@@ -211,9 +211,18 @@
     .skills-item-title {
         margin: 0;
         padding: 0;
-        color: #ffffff;
         font-size: 25px;
         font-weight: 600;
+        background-size: 200% 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: white;
+        background-image: var(--accent-gradient);
+    }
+    h2.skills-item-title:is(:hover, :focus-within) {
+        color: rgba(0, 0, 0, 0);
+        background-position: 0;
+        transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .progress-bar-line {
         background: #6962fd;
