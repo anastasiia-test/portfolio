@@ -2,7 +2,13 @@
     <h1 class="skills-title">Skills</h1>
     <div class="skills-boxes">
         <div class="dropdown">
-            <div class="automation-skills container" data-bs-toggle="collapse" data-bs-target="#collapsible" aria-expanded="false" aria-controls="collapsible">
+            <div
+                class="automation-skills container"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsible"
+                aria-expanded="false"
+                aria-controls="collapsible"
+            >
                 <h3 class="skills-subtitle">
                     <i class="fas fa-theater-masks"></i>
                     Automation<i
@@ -61,14 +67,24 @@
                         <h2 class="skills-item-title">CI/CD pipelines</h2>
                     </div>
                     <div class="progress-bar">
-                        <span class="progress-bar-line" id="collapsible" style="width: 100%;">
+                        <span
+                            class="progress-bar-line"
+                            id="collapsible"
+                            style="width: 100%;"
+                        >
                         </span>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="dropdown">
-            <div class="testing-skills container" data-bs-toggle="collapse" data-bs-target="#collapsible" aria-expanded="false" aria-controls="collapsible">
+            <div
+                class="testing-skills container"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsible"
+                aria-expanded="false"
+                aria-controls="collapsible"
+            >
                 <h3 class="skills-subtitle">
                     <i class="fa-solid fa-gauge fa-sm"></i>
                     Testing skills<i
@@ -122,12 +138,16 @@
                         </span>
                     </div>
                 </li>
-                <li class="skills-item" >
+                <li class="skills-item">
                     <div class="skills-item-container">
                         <h2 class="skills-item-title">Bug tracking</h2>
                     </div>
                     <div class="progress-bar">
-                        <span class="progress-bar-line" id="collapsible" style="width: 100%;">
+                        <span
+                            class="progress-bar-line"
+                            id="collapsible"
+                            style="width: 100%;"
+                        >
                         </span>
                     </div>
                 </li>
@@ -135,9 +155,11 @@
         </div>
     </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 <script src="../scripts/script.js"></script>
-
 
 <style>
     #skills {
@@ -148,7 +170,7 @@
     h2 {
         font-size: 23px;
         text-align: left;
-        margin: 0.2rem 0 0.45rem 0 ;
+        margin: 0.2rem 0 0.45rem 0;
         padding: 0;
     }
     .fa-chevron-right {
@@ -187,9 +209,9 @@
         margin: 0 3.96rem auto;
     }
     h3.skills-subtitle:is(:hover, :focus-within) {
-        color: rgba(0, 0, 0, 0);
         background-position: 0;
         transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        color: transparent; /* Hide the text background */
     }
     .skills-item {
         display: flex;
