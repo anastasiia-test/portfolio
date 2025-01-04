@@ -1,13 +1,13 @@
 <section id="contact" class="section contact">
   <h1 class="contact-title">Contact me</h1>
   <div class="contact__wrap">
-    <button class="contact__resume-button">
+    <div class="contact__resume-button">
       <a
         href="https://anastasia-qa.com/files/Resume Automation QA Engineer.pdf"
         class="contact__resume"
         target="_blank">Get my resume</a
       >
-    </button>
+    </div>
     <p class="contact__paragraph">OR</p>
     <div class="contact__container">
       <form
@@ -38,30 +38,51 @@
           placeholder="Your email"
           required=""
         />
-        <button type="submit" class="contact__button contact__button_text"
+        <div class="submit-button">
+          <button type="submit" class="contact__button contact__button_text"
           >Send</button
         >
+        </div>
       </form>
     </div>
   </div>
 </section>
 
 <style>
-  .contact__button_text {
-    padding: 8px 35px;
-    margin-top: 30px;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 28px;
-    color: #ffffff;
-    text-transform: uppercase;
+  #section {
+    padding: 0;
+    margin: 0;
+  }
+  div.submit-button {
+    display: flex;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid rgba(var(--accent-dusk), 100%);
+    background-image: none;
+    background-size: 400%;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background-color: #29232d;
+  }
+
+  div.submit-button:hover {
+    cursor: pointer;
+    background-position: 0;
+    background-image: var(--accent-gradient);
+  }
+  .submit-button:is(:hover, :focus-within) .contact__button_text {
+    color: rgb(var(--accent-light));
+    background-color: #29232d;
+    transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    background-position: 0;
   }
   .contact__input {
     width: 100%;
     padding: 40px 0 10px 0;
     border: 0;
-    border-bottom: 1px solid rgb(71, 77, 110); 
-    background-color: #1f2332;
+    border-bottom: 1px solid rgb(71, 77, 110);
+    background-color: #262626;
     font-size: 15px;
     color: white;
   }
@@ -72,32 +93,68 @@
     padding-top: 30px;
   }
   .contact__resume-button {
-    background: rgba(var(--accent), 100%);
+    display: flex;
     border-radius: 30px;
-    border: none;
     cursor: pointer;
+    border: 1px solid rgba(var(--accent-dusk), 100%);
+    background-image: none;
+    background-size: 400%;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background-color: #29232d;
   }
 
   .contact__resume-button:hover {
-    background: rgba(var(--accent-dusk), 89%);
+    /* border-radius: 30px; */
+    cursor: pointer;
+    background-position: 0;
+    background-image: var(--accent-gradient);
+    /* border: 1px solid rgba(var(--accent-dusk), 100%); */
+  }
+
+  .contact__resume-button:is(:hover, :focus-within) .contact__resume {
+    color: rgb(var(--accent-light));
+    background-color: #29232d;
+    transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1); */
+    background-position: 0;
   }
 
   ::placeholder {
     color: #a1a1a2;
   }
 
-  .contact__input:last-child {
-    padding-bottom: 20px;
+  input[type="email"] {
+    margin-bottom: 30px;
   }
   .contact__resume {
-    display: block;
+    width: 100%;
     text-decoration: none;
     padding: 12px 30px;
     margin: 0;
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
-    color: #ffffff;
+    transition: color 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+		/* padding: calc(1.5rem - 1px); */
+		border-radius: 29px;
+    border-color: transparent;
+		color: white;
+		background-color: #29232d;
+		opacity: 0.8;
+    border: 1px;
+  }
+  .contact__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  @media screen and (max-width: 450px) {
+    .contact__wrap {
+      padding-top: 40px;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -133,24 +190,37 @@
     width: 100%;
   }
   .contact {
-    padding-top: 150px;
-    margin: 0 auto;
+    /* padding-top: 150px; */
+    margin: 0;
+    padding: 0;
     width: 80%;
   }
   .contact__button {
-    background: rgba(var(--accent), 100%);
+    /* background: rgba(var(--accent), 100%); */
     border-radius: 30px;
     border: none;
     cursor: pointer;
+    width: 100%;
+    padding: 8px 35px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 28px;
+    text-transform: uppercase;
+    transition: color 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    border-color: transparent;
+		color: white;
+		background-color: #29232d;
+		opacity: 0.8;
+    border: 1px;
   }
 
   .contact__button:hover {
-    background: rgba(var(--accent-dusk), 89%);
+    /* background: rgba(var(--accent-dusk), 89%); */
   }
 
   .contact__container {
     width: 550px;
-    background-color: #1f2332;
+    background-color: #262626;
     padding: 30px 50px;
     border-radius: 15px;
     box-sizing: border-box;
