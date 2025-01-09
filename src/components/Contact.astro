@@ -57,20 +57,21 @@
     display: flex;
     border-radius: 30px;
     cursor: pointer;
-    border: 1px solid rgba(var(--accent-dusk), 100%);
+    border: 1.5px solid #393C42;
     background-image: none;
     background-size: 400%;
     background-position: 100%;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    background-color: #29232d;
+    background-color: #23262d;
+    opacity: 0.8
   }
 
-  div.submit-button:hover {
+  div.submit-button:is(:hover, :focus-within) {
     cursor: pointer;
-    background-position: 0;
-    background-image: var(--accent-gradient);
-  }
+		background-position: 0;
+		background-image: var(--accent-gradient);
+	}
   .submit-button:is(:hover, :focus-within) .contact__button_text {
     color: rgb(var(--accent-light));
     background-color: #29232d;
@@ -96,13 +97,14 @@
     display: flex;
     border-radius: 30px;
     cursor: pointer;
-    border: 1px solid rgba(var(--accent-dusk), 100%);
+    border: 1.5px solid #393C42;
     background-image: none;
     background-size: 400%;
     background-position: 100%;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    background-color: #29232d;
+    background-color: #23262d;
+    opacity: 0.8
   }
 
   .contact__resume-button:hover {
@@ -111,6 +113,7 @@
     background-position: 0;
     background-image: var(--accent-gradient);
     /* border: 1px solid rgba(var(--accent-dusk), 100%); */
+    
   }
 
   .contact__resume-button:is(:hover, :focus-within) .contact__resume {
@@ -132,11 +135,10 @@
     text-decoration: none;
     padding: 12px 30px;
     margin: 0;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     line-height: 28px;
     transition: color 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-		/* padding: calc(1.5rem - 1px); */
 		border-radius: 29px;
     border-color: transparent;
 		color: white;
@@ -214,28 +216,24 @@
     border: 1px;
   }
 
-  .contact__button:hover {
-    /* background: rgba(var(--accent-dusk), 89%); */
-  }
-
   .contact__container {
     width: 550px;
     background-color: #262626;
-    padding: 30px 50px;
+    padding: 0px 50px;
     border-radius: 15px;
     box-sizing: border-box;
-    margin-top: 30px;
+    margin-top: 0;
     margin-bottom: 100px;
   }
   .contact-title {
-    margin: 0 0 60px 0;
+    /* margin: 0 0 60px 0; */
     /* color: white; */
     /* font-weight: 700; */
     /* font-size: 80px; */
     /* line-height: 70px; */
   }
   .contact {
-    padding-top: 150px;
+    /* padding-top: 80px; */
     margin: 0 auto;
     width: 80%;
   }
