@@ -1,4 +1,4 @@
-Anastasia's portofolio.
+Anastasia's portfolio.
 
 ## 🧞 Commands
 
