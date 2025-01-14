@@ -55,15 +55,15 @@
   }
   div.submit-button {
     display: flex;
-    border-radius: 29px;
+    border-radius: 31px;
     cursor: pointer;
-    border: 1.5px solid #393C42;
+    border: 1px solid white;
     background-image: none;
     background-size: 400%;
     background-position: 100%;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    background-color: #23262d;
+    background-color: rgb(var(--accent-light));
     opacity: 0.8
   }
 
@@ -71,9 +71,9 @@
     cursor: pointer;
 		background-position: 0;
 		background-image: var(--accent-gradient);
+    border: 1px solid transparent;
 	}
   .submit-button:is(:hover, :focus-within) .contact__button_text {
-    color: rgb(var(--accent-light));
     background-color: #29232d;
     transition: background-color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     background-position: 0;
@@ -98,13 +98,14 @@
     display: flex;
     border-radius: 30px;
     cursor: pointer;
-    border: 1.5px solid #393C42;
+    border: 1px solid white;
     background-image: none;
     background-size: 400%;
     background-position: 100%;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-    background-color: #23262d;
+    background-color: rgb(var(--accent-light));
+    /* color: white; */
     opacity: 0.8
   }
 
@@ -112,6 +113,7 @@
     cursor: pointer;
     background-position: 0;
     background-image: var(--accent-gradient);
+    border: 1px solid transparent;
   }
 
   .contact__resume-button:is(:hover, :focus-within) .contact__resume {
