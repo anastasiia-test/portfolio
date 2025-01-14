@@ -40,6 +40,13 @@ element.addEventListener("shown.bs.collapse", (event) => {
   element.scrollIntoView({
     behavior: "smooth",
     block: "end",
-    inline: "nearest"
+  });
+});
+
+const el = document.getElementById("collapsible-too");
+el.addEventListener("shown.bs.collapse", (event) => {
+  el.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
   });
 });

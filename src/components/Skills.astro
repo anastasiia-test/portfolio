@@ -66,12 +66,8 @@
                     <div class="skills-item-container">
                         <h2 class="skills-item-title">CI/CD pipelines</h2>
                     </div>
-                    <div class="progress-bar">
-                        <span
-                            class="progress-bar-line"
-                            id="collapsible"
-                            style="width: 100%;"
-                        >
+                    <div class="progress-bar" id="collapsible">
+                        <span class="progress-bar-line" style="width: 100%;">
                         </span>
                     </div>
                 </li>
@@ -81,7 +77,7 @@
             <div
                 class="testing-skills container"
                 data-bs-toggle="collapse"
-                data-bs-target="#collapsible"
+                data-bs-target="#collapsible-too"
                 aria-expanded="false"
                 aria-controls="collapsible"
             >
@@ -142,12 +138,8 @@
                     <div class="skills-item-container">
                         <h2 class="skills-item-title">Bug tracking</h2>
                     </div>
-                    <div class="progress-bar">
-                        <span
-                            class="progress-bar-line"
-                            id="collapsible"
-                            style="width: 100%;"
-                        >
+                    <div class="progress-bar" id="collapsible-too">
+                        <span class="progress-bar-line" style="width: 100%;">
                         </span>
                     </div>
                 </li>
@@ -179,7 +171,7 @@
     }
     .dropdown {
         display: flex;
-        /* padding-top: 70px; */
+        /* padding-bottom: 10px; */
         /* cursor: pointer; */
         flex-direction: column;
     }
@@ -261,6 +253,7 @@
         width: 100%;
         padding: 0;
         margin: 0;
+        scroll-margin-bottom: 2em;
     }
 
     @media screen and (max-width: 970px) {
@@ -292,11 +285,7 @@
     }
     @media screen and (max-width: 450px) {
         .skills-boxes {
-            padding-left: 70px;
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center items horizontally */
-            justify-content: center; /* Center items vertically */
+            padding-left: 3em;
             gap: 10px; /* Space between the divs */
         }
         .progress-bar {
